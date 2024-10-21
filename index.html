@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>YueLiang的个人主页</title>
+    <title>月亮的个人主页</title>
     <style>
         body {
             background-image: url("your_personal_image.jpg");
@@ -43,6 +43,17 @@
             height: 100%;
             object-fit: cover;
         }
+        #content {
+            writing-mode: vertical-rl;
+            text-align: left;
+        }
+        #catImg, #singerImg {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            shape-outside: circle();
+            clip-path: circle();
+        }
     </style>
 </head>
 <body>
@@ -50,32 +61,36 @@
     <div id="avatar">
         < img src="your_avatar.jpg" alt="头像">
     </div>
-    <p>欢迎来到我的个人主页，让我为您介绍一下自己。</p >
-    <p>我热爱阅读、旅行和探索新的事物，对世界充满了好奇。</p >
-    <p>以下是一些关于我的精彩内容：</p >
-    <button onclick="showPhoto()">岳亮</button>
-    <button onclick="showStudentId()">学号</button>
+    <div id="content">
+        <p>欢迎来到我的个人主页，让我为您介绍一下自己。</p >
+        <p>我热爱阅读、旅行和探索新的事物，对世界充满了好奇。</p >
+        <p>以下是一些关于我的精彩内容：</p >
+        <button onclick="showPhoto()">岳亮</button>
+        <button onclick="showStudentId()">学号</button>
 
-    <div id="photo" class="content">
-        < img src="your_photo.jpg" alt="我的照片">
-    </div>
+        <div id="photo" class="content">
+            < img src="your_photo.jpg" alt="我的照片">
+        </div>
 
-    <div id="studentId" class="content">
-        <p>3221643</p >
-    </div>
+        <div id="studentId" class="content">
+            <p>3221643</p >
+        </div>
 
-    <div id="hobbies" class="content">
-        <h2>我的爱好</h2>
-        <ul>
-            <li>阅读各种类型的书籍，从小说到哲学，不断开拓思维。</li>
-            <li>喜欢踏上旅途，感受不同地方的风土人情和文化魅力。</li>
-            <li>热衷于尝试新的美食，体验不同的口味和烹饪风格。</li>
-        </ul>
-    </div>
+        <div id="hobbies" class="content">
+            <h2>我的小猫</h2>
+            < img id="catImg" src="your_cat.jpg" alt="小猫照片">
+            <ul>
+                <li>它非常可爱。</li>
+                <li>总是陪伴着我。</li>
+                <li>给我带来快乐。</li>
+            </ul>
+        </div>
 
-    <div id="goals" class="content">
-        <h2>我的目标</h2>
-        <p>在未来，我希望能够在自己热爱的领域取得成就，不断提升自己，为社会做出贡献。</p >
+        <div id="goals" class="content">
+            <h2>我喜欢的歌手</h2>
+            < img id="singerImg" src="your_singer.jpg" alt="歌手照片">
+            <p>我喜欢[歌手名字]，他/她的歌曲总能打动我。</p >
+        </div>
     </div>
 
     <script>
