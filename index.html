@@ -1,106 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>月亮的个人主页</title>
-    <style>
-        body {
-            background-image: url("static/images/background.jpg");
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        h1 {
-            text-align: center;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: lightblue;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: skyblue;
-        }
-        #photo, #studentId, #hobbies, #goals {
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-        #photo.show, #studentId.show, #hobbies.show, #goals.show {
-            opacity: 1;
-        }
-        #avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        #avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        #content {
-            writing-mode: vertical-rl;
-            text-align: left;
-        }
-        #catImg, #singerImg {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            shape-outside: circle();
-            clip-path: circle();
-        }
-    </style>
+  <title>月亮的个人主页</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("");
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+  .content {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+  .section {
+      width: 80%;
+      margin: 20px 0;
+      padding: 20px;
+      opacity: 0.8;
+      background-color: lightblue;
+      box-sizing: border-box;
+    }
+
+    #maker-info {
+      font-size: 12px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>月亮的个人主页</h1>
-    <div id="avatar">
-        < img src="static/images/head.jpg" alt="头像">
-    </div>
-    <div id="content">
-        <p>欢迎来到我的个人主页，让我为您介绍一下自己。</p >
-        <p>我热爱阅读、旅行和探索新的事物，对世界充满了好奇。</p >
-        <p>以下是一些关于我的精彩内容：</p >
-        <button onclick="showPhoto()">岳亮</button>
-        <button onclick="showStudentId()">学号</button>
+  <h1>月亮的个人主页</h1>
 
-        <div id="photo" class="content">
-            < img src="static/images/head.jpg" alt="我的照片">
-        </div>
-
-        <div id="studentId" class="content">
-            <p>3221643</p >
-        </div>
-
-        <div id="hobbies" class="content">
-            <h2>我的小猫</h2>
-            < img id="catImg" src="your_cat.jpg" alt="小猫照片">
-            <ul>
-                <li>它非常可爱。</li>
-                <li>总是陪伴着我。</li>
-                <li>给我带来快乐。</li>
-            </ul>
-        </div>
-
-        <div id="goals" class="content">
-            <h2>我喜欢的歌手</h2>
-            < img id="singerImg" src="your_singer.jpg" alt="歌手照片">
-            <p>我喜欢[歌手名字]，他/她的歌曲总能打动我。</p >
-        </div>
+  <div class="content">
+    <div class="section">
+      <h2>我的小猫</h2>
+      < img src="cat1.jpg" style="width: 200px; height: 200px; border-radius: 50%; shape-outside: circle(); clip-path: circle;">
+      < img src="cat2.jpg" style="width: 200px; height: 200px; border-radius: 50%; shape-outside: circle(); clip-path: circle;">
+      < img src="cat3.jpg" style="width: 200px; height: 200px; border-radius: 50%; shape-outside: circle(); clip-path: circle;">
     </div>
 
-    <script>
-        function showPhoto() {
-            document.getElementById('photo').classList.add('show');
-        }
+    <div class="section">
+      <h2>我喜欢的歌手</h2>
+      < img src="singer1.jpg" style="width: 200px; height: 200px; border-radius: 50%; shape-outside: circle(); clip-path: circle;">
+      < img src="singer2.jpg" style="width: 200px; height: 200px; border-radius: 50%; shape-outside: circle(); clip-path: circle;">
+      < img src="singer3.jpg" style="width: 200px; height: 200px; border-radius: 50%; shape-outside: circle(); clip-path: circle;">
+    </div>
+  </div>
 
-        function showStudentId() {
-            document.getElementById('studentId').classList.add('show');
-        }
-    </script>
+  <div id="maker-info">制作者：[您的名字]  学号：[您的学号]</div>
 </body>
+
 </html>
