@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>月亮的个人主页</title>
+    <title>YueLiang的个人主页</title>
     <style>
         body {
             background-image: url("your_personal_image.jpg");
@@ -13,25 +13,58 @@
         h1 {
             text-align: center;
         }
+        button {
+            padding: 10px 20px;
+            background-color: lightblue;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: skyblue;
+        }
+        #photo, #studentId, #hobbies, #goals {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        #photo.show, #studentId.show, #hobbies.show, #goals.show {
+            opacity: 1;
+        }
+        #avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
     <h1>月亮的个人主页</h1>
+    <div id="avatar">
+        < img src="your_avatar.jpg" alt="头像">
+    </div>
     <p>欢迎来到我的个人主页，让我为您介绍一下自己。</p >
     <p>我热爱阅读、旅行和探索新的事物，对世界充满了好奇。</p >
     <p>以下是一些关于我的精彩内容：</p >
     <button onclick="showPhoto()">岳亮</button>
     <button onclick="showStudentId()">学号</button>
 
-    <div id="photo" style="display: none;">
+    <div id="photo" class="content">
         < img src="your_photo.jpg" alt="我的照片">
     </div>
 
-    <div id="studentId" style="display: none;">
+    <div id="studentId" class="content">
         <p>3221643</p >
     </div>
 
-    <div id="hobbies">
+    <div id="hobbies" class="content">
         <h2>我的爱好</h2>
         <ul>
             <li>阅读各种类型的书籍，从小说到哲学，不断开拓思维。</li>
@@ -40,18 +73,18 @@
         </ul>
     </div>
 
-    <div id="goals">
+    <div id="goals" class="content">
         <h2>我的目标</h2>
         <p>在未来，我希望能够在自己热爱的领域取得成就，不断提升自己，为社会做出贡献。</p >
     </div>
 
     <script>
         function showPhoto() {
-            document.getElementById('photo').style.display = 'block';
+            document.getElementById('photo').classList.add('show');
         }
 
         function showStudentId() {
-            document.getElementById('studentId').style.display = 'block';
+            document.getElementById('studentId').classList.add('show');
         }
     </script>
 </body>
