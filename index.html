@@ -2,9 +2,24 @@
 <html>
 <head>
     <title>月亮的个人主页</title>
+    <style>
+        body {
+            background-image: url("your_personal_image.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1>月亮的个人主页</h1>
+    <p>欢迎来到我的个人主页，让我为您介绍一下自己。</p >
+    <p>我热爱阅读、旅行和探索新的事物，对世界充满了好奇。</p >
+    <p>以下是一些关于我的精彩内容：</p >
     <button onclick="showPhoto()">岳亮</button>
     <button onclick="showStudentId()">学号</button>
 
@@ -14,6 +29,20 @@
 
     <div id="studentId" style="display: none;">
         <p>3221643</p >
+    </div>
+
+    <div id="hobbies">
+        <h2>我的爱好</h2>
+        <ul>
+            <li>阅读各种类型的书籍，从小说到哲学，不断开拓思维。</li>
+            <li>喜欢踏上旅途，感受不同地方的风土人情和文化魅力。</li>
+            <li>热衷于尝试新的美食，体验不同的口味和烹饪风格。</li>
+        </ul>
+    </div>
+
+    <div id="goals">
+        <h2>我的目标</h2>
+        <p>在未来，我希望能够在自己热爱的领域取得成就，不断提升自己，为社会做出贡献。</p >
     </div>
 
     <script>
